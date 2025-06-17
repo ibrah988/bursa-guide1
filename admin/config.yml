@@ -1,0 +1,21 @@
+
+backend:
+  name: git-gateway
+  branch: main
+
+locale: 'ar'
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "ads"
+    label: "الإعلانات"
+    folder: "ads"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "الاسم", name: "title", widget: "string" }
+      - { label: "الوصف", name: "description", widget: "text" }
+      - { label: "السعر", name: "price", widget: "string", required: false }
+      - { label: "الصورة", name: "image", widget: "image" }
